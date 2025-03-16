@@ -1,0 +1,134 @@
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.loginBox {
+  width: 60%;
+  height: 50vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+}
+
+.loginBox .formBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* align-items: center; */
+}
+
+.labelInputBox {
+  width: 25vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  height: 30px;
+  border: 1px solid white;
+  /* background-color: black; */
+}
+
+.labelInputBox label {
+  margin-right: 5px;
+}
+
+.labelInputBox input {
+  width: 80%;
+  background-color: transparent;
+  height: 30px;
+  border-radius: 10px;
+  /* border: none; */
+}
+
+.submit-button {
+  margin: 10px 0;
+}
+.main-screen {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.nav-bar {
+  width: 20%;
+  height: 100vh;
+  /* margin: 20px 0; */
+  /* border-right: 2px solid black; */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.profile {
+  margin: 40px 0 0 0;
+  /* margin-bottom: 20px; */
+}
+.profile img{
+  height: 100px;
+  width: 100px;
+  margin: 10px 0;
+  border-radius: 50%;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-profile {
+  width: 60%;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h3, p {
+  margin: 0;
+}
+
+.nav-profile h3 {
+  font-size: 14px;
+  
+}
+
+.navList {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+}
+
+.navList ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.navList button {
+  /* border: 1px solid black; */
+  padding: 10px 20px;
+  margin: 10px 0;
+  /* text-decoration: none; */
+  /* list-style: none; */
+  border-radius: 10px;
+}
+
+.logout {
+  margin-top: 100px;
+}
+
+.dashboard {
+  margin: 30px auto;
+}
