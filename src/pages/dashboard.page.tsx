@@ -1,6 +1,6 @@
 // import { useState } from 'react';
 // import { useAuthContext } from '../context/auth.context';
-import DashboardComponent from '../components/dashboard.component';
+import IntroComponent from '../components/dashboard.component';
 import Navbar from '../components/nav.component';
 
 export default function DashboardPage() {
@@ -20,7 +20,7 @@ export default function DashboardPage() {
   return (
     <div className="main-screen">
         <Navbar />
-        <DashboardComponent />
+        <IntroComponent intro="Dashboard" />
     </div>
   );
 }
