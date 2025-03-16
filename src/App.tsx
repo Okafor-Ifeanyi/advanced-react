@@ -5,6 +5,7 @@ import LoginPage from "./pages/login.page";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProfilePage from "./pages/profile.page";
 import PrivateRouteWrapper from "./auth-wrappers/PrivateRouteWrapper";
+import SettingPage from "./pages/setting.page";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         >
           <Route path="/dashboard" index element={<DashboardPage />} />
           <Route path="/dashboard/profile" element={<ProfilePage />} />
-          <Route path="/dashboard/settings" element={<h1>Settings</h1>} />
+          <Route path="/dashboard/settings" element={<SettingPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
