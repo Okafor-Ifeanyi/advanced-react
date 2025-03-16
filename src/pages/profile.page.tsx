@@ -1,12 +1,21 @@
-import IntroComponent from '../components/dashboard.component';
-import Navbar from '../components/nav.component';
+import { useNavigate } from "react-router-dom";
+import IntroComponent from "../components/dashboard.component";
+import { useAuthContext } from "../context/auth.context";
+import { useEffect } from "react";
 
 export default function ProfilePage() {
+  const navigate = useNavigate();
+  const { isLoggedIn } = useAuthContext();
+
+  useEffect(() => {
+    if (!isLoggedIn) {
+      navigate("/");
+    }
+  }, [isLoggedIn, navigate]);
 
   return (
     <div className="main-screen">
-        <Navbar />
-        <IntroComponent intro="Profile" />
+      <IntroComponent intro="Profile" />
     </div>
   );
 }

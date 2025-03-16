@@ -1,17 +1,25 @@
-import { useState } from 'react';
-import { useAuthContext } from '../context/auth.context';
+import { useState } from "react";
+import { useAuthContext } from "../context/auth.context";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginPage() {
   const { setIsLoggedIn, setUser } = useAuthContext();
-  const [email, setEmail] = useState('');
-  const [role, setRole] = useState('');
+  const navigate = useNavigate();
+  const [name, setName] = useState("");
+  const [role, setRole] = useState("admin");
+
+  const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setRole(e.target.value);
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (email && role) {
+    if (name && role) {
+      console.log(name, role, "login");
+
       setIsLoggedIn(true);
-      setUser({ email, role });
-    //   Navigate('/dashboard');
+      setUser({ name, role });
+      navigate("/dashboard");
     }
   };
 
@@ -20,24 +28,28 @@ export default function LoginPage() {
       <form onSubmit={handleSubmit} className="formBox">
         <h2 className="login-text">Login</h2>
         <div className="labelInputBox">
-          <label className="">Email</label>
+          <label className="">Name</label>
           <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             className=""
             required
           />
         </div>
         <div className="labelInputBox">
           <label className="">Role</label>
-          <input
-            type="text"
+          <select
             value={role}
-            onChange={(e) => setRole(e.target.value)}
-            className=""
+            defaultValue={"admin"}
+            onChange={handleSelectChange}
+            className="labelInputBox"
             required
-          />
+          >
+            <option value="admin">Admin</option>
+            <option value="editor">Editor</option>
+            <option value="viewer">Viewer</option>
+          </select>
         </div>
         <button type="submit" className="submit-button">
           Login
