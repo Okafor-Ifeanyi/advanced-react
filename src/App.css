@@ -319,7 +319,6 @@ h3, p {
   }
   .navList {
     justify-content: flex-start;
-
   }
   .navList ul{
     width: 100%;
@@ -347,6 +346,7 @@ h3, p {
    justify-content: center;
    align-items: center;
    height: 100vh;
+   background-color: transparent;
   }
 
   body {
