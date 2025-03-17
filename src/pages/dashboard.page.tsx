@@ -1,4 +1,4 @@
-import IntroComponent from "../components/dashboard.component";
+import IntroComponent from "../components/Intro";
 import { useAuthContext } from "../context/auth.context";
 export default function DashboardPage() {
   const { user } = useAuthContext();
@@ -8,9 +8,9 @@ export default function DashboardPage() {
     //   <IntroComponent intro="Dashboard" />
     // </div>
     <>
-      {role === "admin" && <IntroComponent intro="Admin" />}
-      {role === "editor" && <IntroComponent intro="Editors" />}
-      {role === "viewer" && <IntroComponent intro="Viewers" />}
+      {role === "admin" && <IntroComponent intro="Admin Dashboard" name={user?.name || ""} />}
+      {role === "editor" && <IntroComponent intro="Editor Dashboard" name={user?.name || ""} />}
+      {role === "viewer" && <IntroComponent intro="Viewer Dashboard" name={user?.name || ""} />}
     </>
   );
 }

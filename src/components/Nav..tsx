@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <div className="nav-bar">
       <div className="profile">
-        <img src="" alt="" />
+        <img src="https://github.com/user-attachments/assets/0df1b3bc-ccab-4aa2-bb22-676a73e067a3" alt="pfp" />
         <div className="nav-profile">
           <h3>{user && user.name}</h3>
           <p>{user && user.role}</p>

@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import IntroComponent from "../components/dashboard.component";
+import IntroComponent from "../components/Intro";
 import { useAuthContext } from "../context/auth.context";
 import { useEffect } from "react";
 
@@ -15,7 +15,7 @@ export default function ProfilePage() {
 
   return (
     <div className="main-screen">
-      <IntroComponent intro="Profile" />
+      <IntroComponent intro="Profile"  />
     </div>
   );
 }
