@@ -323,7 +323,7 @@ h3, p {
   .navList ul{
     width: 100%;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 0;
   }
 
@@ -375,7 +375,19 @@ h3, p {
   .logout {
     margin-top: 20px;
     position: absolute;
-    bottom: 5%;
-    right: 40%;
+    bottom: 10px;
+    /* right: 40%; */
+  }
+
+  .editor-panel {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .editor-button {
+    width: 100%;
+    margin-bottom: 3%;
+    padding: 0;
   }
 }

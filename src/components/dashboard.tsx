@@ -1,4 +1,4 @@
-export const AdminComponent = () => {
+export const  AdminComponent = () => {
     return (
         <>
             <section className="first-row">
